@@ -80,6 +80,8 @@ class HomeState extends State<Home> {
               child: Icon(Icons.delete),
               onTap: () async {
                 //TODO 3 Panggil Fungsi untuk Delete dari DB berdasarkan Item
+                dbHelper.delete(this.itemList[index].id);
+                updateListView();
               },
             ),
             onTap: () async {
