@@ -75,7 +75,10 @@ class HomeState extends State<Home> {
               this.itemList[index].name,
               style: textStyle,
             ),
-            subtitle: Text(this.itemList[index].price.toString()),
+            subtitle: Text("Price: " +
+                this.itemList[index].price.toString() +
+                "  Stok: " +
+                this.itemList[index].stok.toString()),
             trailing: GestureDetector(
               child: Icon(Icons.delete),
               onTap: () async {
