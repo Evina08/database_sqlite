@@ -16,6 +16,11 @@ class HomeState extends State<Home> {
   List<Item> itemList;
   @override
   Widget build(BuildContext context) {
+    void initState() {
+      super.initState();
+      updateListView();
+    }
+
     if (itemList == null) {
       itemList = List<Item>();
     }
